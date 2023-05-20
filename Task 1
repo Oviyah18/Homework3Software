@@ -1,0 +1,72 @@
+#TASK 1 PART A
+data = """JUMP Amal
+JUMP Belle
+JUMP Charlie
+JUMP Dylan
+JOIN Evelyn
+JUMP Frankie
+JUMP Gloria
+JOIN Helen
+JOIN Iman
+JOIN Joey
+JOIN Kimberley
+JUMP Lauren
+JOIN Marie
+JUMP Nuria
+JUMP Odette
+JUMP Priyanka
+JOIN Quinn
+JOIN Romily
+JOIN Sofia
+JUMP Theresa
+JUMP Una
+JUMP Violet
+JOIN Wanda
+JUMP Xanthe
+JOIN Yvonne
+JOIN Zara"""
+
+with open('hw3_q1.txt', 'w') as file:
+    file.write(data)
+
+from collections import deque
+
+# Create an empty deque to represent the queue
+queue = deque()
+
+# Read the input file
+with open('hw3_q1.txt', 'r') as file:
+    for line in file:
+        # Split the line into words
+        words = line.strip().split()
+        command, name = words[0], words[1]
+
+        if command == 'JUMP':
+            # Add the person to the front of the queue
+            queue.appendleft(name)
+        elif command == 'JOIN':
+            # Add the person to the back of the queue
+            queue.append(name)
+
+# Print the final order of the queue
+print(list(queue))
+
+""" PART B
+# ASSUMPTIONS:
+# The assumption is made that the input file 
+# contains a valid format where each line has either 
+# "JUMP" or "JOIN" as the first word, followed by the 
+# name of the person as the second word. There are no 
+# additional words or formatting variations in the lines.
+
+
+# The assumption is made that the input file exists and can be
+# successfully opened for reading.
+
+
+# The assumption is made that the names of the people in
+# the queue do not contain any leading or trailing spaces.
+
+
+# The assumption is made that the order of names in the 
+# output file does not need to be sorted or modified in any particular way."""
