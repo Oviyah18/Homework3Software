@@ -53,20 +53,8 @@ print(list(queue))
 
 """ PART B
 # ASSUMPTIONS:
-# The assumption is made that the input file 
-# contains a valid format where each line has either 
-# "JUMP" or "JOIN" as the first word, followed by the 
-# name of the person as the second word. There are no 
-# additional words or formatting variations in the lines.
-
-
-# The assumption is made that the input file exists and can be
-# successfully opened for reading.
-
-
-# The assumption is made that the names of the people in
-# the queue do not contain any leading or trailing spaces.
-
-
-# The assumption is made that the order of names in the 
-# output file does not need to be sorted or modified in any particular way."""
+1. Input file has a fixed format with JOIN/JUMP followed my a only name for each line.
+2. Assume that the file already exists
+3. File opens successfully
+4. No leading or trailing spaces for the data in the file
+"""
